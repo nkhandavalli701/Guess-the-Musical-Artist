@@ -1,0 +1,130 @@
+<html>
+<head>
+  <title>guessthepicture.html</title>
+    <link rel="stylesheet" href="guessthepicture.css">
+    <script>
+
+      var score = 0;
+      var questionCount = 0;
+      var answer1= "";
+      var answer2= "";
+      var answer3= "";
+      var answer4= "";
+      var answer5= "";
+      function Quiz()
+        {
+          if (questionCount == 0){
+            answer1 = document.getElementById("answer").value;
+            if (answer1 == "Taylor Swift"){
+            score = score + 1;
+          }
+          document.getElementById("question").innerHTML = "<img src= 'ag.jpg' width= 500 height= 350>";
+
+        }
+          if (questionCount == 1){
+            answer2 = document.getElementById("answer").value;
+            if (answer2 == "Ariana Grande"){
+            score = score + 1;
+          }
+          document.getElementById("question").innerHTML = "<img src= 'shawnmendes.jpg' width= 500 height= 350>";
+
+        }
+          if (questionCount == 2){
+            answer3 = document.getElementById("answer").value;
+            if (answer3 == "Shawn Mendes"){
+            score = score + 1;
+          }
+          document.getElementById("question").innerHTML = "<img src= 'bts2.jpg' width= 550 height= 350>";
+
+        }
+          if (questionCount == 3){
+            answer4 = document.getElementById("answer").value;
+            if (answer4 == "BTS"){
+            score = score + 1;
+          }
+          document.getElementById("question").innerHTML = "<img src= 'camilacabello.jpg' width= 450 height= 350>";
+
+        }
+          if (questionCount == 4){
+            answer5 = document.getElementById("answer").value;
+            if (answer5 == "Camila Cabello"){
+            score = score + 1;
+          }
+          document.getElementById("question").style.visibility = "hidden";
+          document.getElementById("answer").style.visibility = "hidden";
+          document.getElementById("nbutton").style.visibility = "hidden";
+          document.getElementById("message").innerHTML = "RESULTS!"
+          document.getElementById("final").innerHTML = "Your score: " + score + "/5";
+          document.getElementById("correct").innerHTML = "Correct Answers"
+          document.getElementById("your").innerHTML = "Your Answers"
+          document.getElementById("answer1").innerHTML = "Answer: Taylor Swift ";
+          document.getElementById("answer1.5").innerHTML = "Your Answer: " + answer1;
+          document.getElementById("answer2").innerHTML = "Answer: Ariana Grande  ";
+          document.getElementById("answer2.5").innerHTML = "Your Answer: " + answer2;
+          document.getElementById("answer3").innerHTML = "Answer: Shawn Mendes  ";
+          document.getElementById("answer3.5").innerHTML = "Your Answer: " + answer3;
+          document.getElementById("answer4").innerHTML = "Answer: BTS  ";
+          document.getElementById("answer4.5").innerHTML = "Your Answer: " + answer4;
+          document.getElementById("answer5").innerHTML = "Answer: Camila Cabello  ";
+          document.getElementById("answer5.5").innerHTML = "Your Answer: " + answer5;
+    }
+    questionCount = questionCount + 1;
+  }
+        function refreshPage()
+        {
+            window.parent.location = window.parent.location.href;
+            table = "";
+            score = 0;
+            questionCount = 0;
+            document.getElementById("question").innerHTML = "<img src = 'tswift.jpg' width= 500 height= 350>";
+            document.getElementById("qbutton").style.visibility="hidden";
+          }
+
+  </script>
+</head>
+<body>
+  <br>
+  <div class="myDiv">
+  <h2>Guess the Musical Artist!</h2>
+  <ul>
+  <span id = "question"><img src = 'tswift.jpg' width= 500 height= 350></span>
+  <br>
+  <input type = "text" id = "answer">
+  <input id = "nbutton" class="nbutton" type = "button" value = "Next Picture" onClick = "Quiz()">
+  <input id= "qbutton" class= "qbutton" type = "button" value = "Play Again" onClick="refreshPage()" >
+  <span id= "end">
+  <br>
+  <span id= "message"></span>
+  <br>
+  <span id = "final"></span>
+  <br>
+  <table id= "table" class="center">
+  <tr>
+    <td><span id= "correct"></td>
+    <td><span id= "your"></td>
+  </tr>
+  <tr>
+    <td><span id= "answer1"></td>
+    <td><span id= "answer1.5"></td>
+  </tr>
+  <tr>
+    <td><span id= "answer2"></td>
+    <td><span id= "answer2.5"></td>
+  </tr>
+  <tr>
+    <td><span id= "answer3"></td>
+    <td><span id= "answer3.5"></td>
+  </tr><tr>
+    <td><span id= "answer4"></td>
+    <td><span id= "answer4.5"></td>
+  </tr>
+  <tr>
+    <td><span id= "answer5"></td>
+    <td><span id= "answer5.5"></td>
+  </tr>
+</table>
+</ul>
+</span>
+</div>
+</body>
+</html>
