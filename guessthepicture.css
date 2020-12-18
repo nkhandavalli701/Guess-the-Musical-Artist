@@ -1,0 +1,44 @@
+
+body{
+  background-color:#116466;
+  font-family:serif;
+  font-size: 30px;
+  color:  #FFCB9A;
+  font-weight: bold;
+}
+table{
+  font-size: 20px;
+}
+.myDiv {
+  text-align: center;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.nbutton {
+  background-color: #FFCB9A;
+  border: none;
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+}
+.qbutton {
+  background-color: #FFCB9A;
+  border: none;
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+}
+h2:hover{
+  background-color: #2C3531;
+}
+input:hover{
+  background-color: #D9B08C;
+}
